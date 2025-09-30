@@ -1,0 +1,59 @@
+:root {
+  --bg-light: #f0f0f0;
+  --bg-dark: #0f0f0f;
+  --text-light: #121212;
+  --text-dark: #ffffff;
+  --card-color: #00fff7;
+}
+
+body.light-mode {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background-color: #121212;
+  color: var(--card-color);
+  border: 1px solid var(--card-color);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 247, 0.3);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 247, 0.6);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Animação de entrada */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
